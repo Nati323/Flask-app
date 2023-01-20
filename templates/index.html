@@ -1,0 +1,14 @@
+<html>
+<head></head>
+<body>
+{% with messages = get_flashed_messages(with_categories=true) %}
+   {% if messages %}
+      {% for message in messages %}
+         {{ message }}
+      {% endfor %}
+   {% endif %}
+{% endwith %}
+    <h1>Hello, {{username}}</h1>
+    <a href='/logout'>Logout</a>
+</body>
+<html>
